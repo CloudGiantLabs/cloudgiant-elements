@@ -1,0 +1,120 @@
+@import '../../../assets/scss/variables';
+@import '../../../assets/scss/mixins';
+
+/* The toast - position it at the bottom and in the middle of the screen */
+#toast {
+  visibility: visible; /* Hidden by default. Visible on click */
+  min-width: 250px; /* Set a default minimum width */
+  margin-left: -125px; /* Divide value of min-width by 2 */
+  color: #fff; /* White text color */
+  text-align: center; /* Centered text */
+  position: absolute; /* Sit on top of the screen */
+  z-index: 1; /* Add a z-index if needed */
+  bottom: 30px; /* 30px from the bottom */
+  transform: translate(50%, -50%);
+  right: 50%;
+  cursor: pointer;
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none;
+}
+
+/* Show the toast when clicking on a button (class added with JavaScript) */
+#toast.show {
+  visibility: visible; /* Show the toast */
+  /* Add animation: Take 0.5 seconds to fade in and out the toast.
+  However, delay the fade out process for 2.5 seconds */
+  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+.toastRows {
+  display: grid;
+  grid-template-rows: auto auto;
+  text-align: left;
+}
+
+.closeIcon {
+  width: 16px;
+  filter: invert(100%) sepia(0%) saturate(7488%) hue-rotate(159deg)
+    brightness(102%) contrast(102%);
+}
+
+.successToast {
+  display: grid;
+  grid-template-columns: 40px auto 20px;
+  padding: $padding-small; /* Padding */
+  border-radius: $border-radius;
+  background-color: $color-success; /* Black background color */
+}
+
+.warningToast {
+  display: grid;
+  grid-template-columns: 40px auto 20px;
+  padding: $padding-small; /* Padding */
+  border-radius: $border-radius;
+  background-color: $color-warning; /* Black background color */
+}
+
+.errorToast {
+  display: grid;
+  grid-template-columns: 40px auto 20px;
+  padding: $padding-small; /* Padding */
+  border-radius: $border-radius;
+  background-color: $color-error; /* Black background color */
+}
+
+.alertIcon {
+  width: 20px;
+  padding-left: $padding-small;
+  filter: invert(100%) sepia(0%) saturate(7488%) hue-rotate(159deg)
+    brightness(102%) contrast(102%);
+}
+
+/* Animations to fade the toast in and out */
+@-webkit-keyframes fadein {
+  from {
+    bottom: 0;
+    opacity: 0;
+  }
+  to {
+    bottom: 30px;
+    opacity: 1;
+  }
+}
+
+@keyframes fadein {
+  from {
+    bottom: 0;
+    opacity: 0;
+  }
+  to {
+    bottom: 30px;
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeout {
+  from {
+    bottom: 30px;
+    opacity: 1;
+  }
+  to {
+    bottom: 0;
+    opacity: 0;
+  }
+}
+
+@keyframes fadeout {
+  from {
+    bottom: 30px;
+    opacity: 1;
+  }
+  to {
+    bottom: 0;
+    opacity: 0;
+  }
+}

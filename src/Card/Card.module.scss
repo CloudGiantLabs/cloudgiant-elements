@@ -1,0 +1,21 @@
+@import '../../../assets/scss/variables';
+@import '../../../assets/scss/mixins';
+
+.card {
+  color: #b1b1b1;
+  background-color: $color-white;
+  border-radius: $border-radius-more;
+  border: 2px solid $color-border-dark;
+  box-shadow: $box-shadow;
+}
+
+.cardContainer {
+  @extend .card;
+  min-width: 275px;
+  max-height: 580px;
+  text-align: center;
+}
+
+.cardAuth {
+  padding: $padding-extraLarge;
+}

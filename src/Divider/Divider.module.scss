@@ -1,0 +1,8 @@
+@import '../../../assets/scss/variables';
+@import '../../../assets/scss/mixins';
+
+.divider {
+  background-color: $color-light-grey;
+  border-radius: $border-radius;
+  height: 1px;
+}

@@ -1,0 +1,68 @@
+@import '../../../assets/scss/variables';
+@import '../../../assets/scss/mixins';
+
+.dialog {
+  display: block;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.dialogContent {
+  display: grid;
+  grid-template-rows: 70px auto 50px 25px;
+  position: absolute;
+  text-align: center;
+  top: 40%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(calc(-50% + 33px), -50%);
+  overflow: hidden;
+  background-color: $color-primary-hover;
+  color: $color-white;
+  padding: $padding-large $padding-extraLarge $padding-extraExtraLarge
+    $padding-extraLarge;
+  border-radius: $border-radius;
+}
+
+.iconRow {
+  display: grid;
+  align-items: center;
+  text-align: center;
+  justify-items: center;
+}
+
+.alertIcon {
+  width: 50px;
+  filter: invert(48%) sepia(76%) saturate(3396%) hue-rotate(334deg)
+    brightness(87%) contrast(96%);
+}
+
+.headerText {
+  padding-bottom: 5px;
+}
+
+.dialogButtonColumns {
+  display: grid;
+  grid-template-columns: auto auto;
+}
+
+.dialogButtonLeft {
+  padding-right: $padding-medium;
+}
+
+.dialogButtonRight {
+  padding-left: $padding-medium;
+}

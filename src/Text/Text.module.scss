@@ -1,0 +1,44 @@
+@import '../../../assets/scss/variables';
+@import '../../../assets/scss/mixins';
+
+.text {
+  font-size: $font-size-normal;
+}
+
+.textBold {
+  font-size: $font-size-normal;
+  font-weight: bold;
+}
+
+.link {
+  color: $color-light-grey;
+  font-weight: bold;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.link:hover {
+  color: $color-medium-grey;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.heading {
+  font-weight: bold;
+  font-size: 19px;
+}
+
+.subHeading {
+  font-weight: bold;
+  font-size: 17px;
+}
+
+.button {
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.extraLarge {
+  font-weight: bold;
+  font-size: 30px;
+}

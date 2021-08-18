@@ -1,0 +1,52 @@
+/**
+* Variables
+*/
+
+// Base Colors
+$color-base: #181d20;
+$color-primary: #2c333a;
+$color-primary-hover: #353d46;
+$color-secondary: #262c30;
+$color-white: #fff;
+$color-lightest-grey: #b0b0b090;
+$color-light-grey: #b0b0b0;
+$color-medium-grey: #59595970;
+$color-dark-grey: #595959;
+$color-yellow: #ffff41;
+$color-success: #6e9075;
+$color-error: #db4c40;
+$color-warning: #fc6722;
+
+// Style Colors
+$color-text: $color-dark-grey;
+$color-border-light: $color-lightest-grey;
+$color-border-dark: $color-dark-grey;
+$color-border-hover: $color-medium-grey;
+$color-placeholder: $color-medium-grey;
+$color-shadow: $color-dark-grey;
+
+//
+$border-radius: 6px;
+$border-radius-more: 6px;
+
+// Font sizes
+$font-size-small: 11px;
+$font-size-normal: 15px;
+
+// Padding
+$padding-small: 5px;
+$padding-medium: 10px;
+$padding-large: 15px;
+$padding-extraLarge: 30px;
+$padding-extraExtraLarge: 40px;
+
+// Box Shadow
+$box-shadow: $color-dark-grey 0px 1px 2px 0px;
+$box-shadow-hover: $color-medium-grey 0px 1px 4px;
+
+// Transition animation
+$transition-slow: 800ms;
+$transition-fast: 400ms;
+
+// Layout widths
+$sidebar-width: 50px;

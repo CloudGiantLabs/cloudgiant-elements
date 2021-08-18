@@ -1,0 +1,67 @@
+@import '../../../assets/scss/variables';
+@import '../../../assets/scss/mixins';
+
+.input {
+  min-height: 45px;
+  border-radius: $border-radius;
+  border: 1px solid $color-border-light;
+  color: $color-text;
+  font-size: $font-size-normal;
+  width: 100%;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+.input[type='text'] {
+  padding-left: 15px;
+}
+
+.input[type='email'] {
+  padding-left: $padding-extraExtraLarge;
+}
+
+.input[type='password'] {
+  padding-left: $padding-extraExtraLarge;
+}
+
+input[type='text']:focus {
+  outline: none;
+}
+
+input[type='email']:focus {
+  outline: none;
+}
+
+input[type='password']:focus {
+  outline: none;
+}
+
+.input:hover {
+  border: 1px solid $color-border-hover;
+  box-shadow: $box-shadow-hover;
+}
+.input:focus {
+  border: 1px solid $color-border-hover;
+  box-shadow: $box-shadow-hover;
+  cursor: text;
+}
+.input:active {
+  border: 1px solid $color-border-hover;
+  box-shadow: $box-shadow-hover;
+}
+.input::placeholder {
+  /* Chrome/Opera/Safari */
+  color: $color-placeholder;
+  font-weight: bold;
+  font-size: $font-size-normal;
+}
+
+.inputIcon {
+  margin-top: 14px;
+  margin-left: $padding-large;
+  position: absolute;
+  height: 18px;
+  filter: invert(42%) sepia(4%) saturate(0%) hue-rotate(225deg)
+    brightness(93%) contrast(97%);
+  cursor: pointer;
+}

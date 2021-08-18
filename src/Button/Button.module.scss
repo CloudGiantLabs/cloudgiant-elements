@@ -1,0 +1,47 @@
+@import '../../../assets/scss/variables';
+@import '../../../assets/scss/mixins';
+
+.button {
+  color: white;
+  background-color: $color-base;
+  border-radius: $border-radius;
+  border: 2px solid $color-primary-hover;
+  height: 40px;
+  width: 100%;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.button:hover {
+  border: 2px solid $color-border-dark;
+}
+
+.buttonText {
+  font-size: $font-size-normal;
+  display: inline-block;
+  margin-top: -5px;
+}
+
+.loadingRing {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+}
+.loadingRing:after {
+  content: ' ';
+  display: block;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  border: 3px solid #fff;
+  border-color: #fff transparent #fff transparent;
+  animation: loadingRing 1.2s linear infinite;
+}
+@keyframes loadingRing {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
